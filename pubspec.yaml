@@ -86,6 +86,21 @@ flutter:
     - assets/screen-img/back.png
     - assets/screen-img/menu.png
     - assets/screen-img/notification.png
+    - assets/program-img/logo.png
+    - assets/program-img/arrow-down.png
+    - assets/program-img/doc.png
+    - assets/program-img/one_month.png
+    - assets/program-img/six_month.png
+    - assets/program-img/three_month.png
+    - assets/program-img/twe_month.png
+    - assets/program-img/lady-doc.png
+    - assets/program-img/medi_box.png
+    - assets/program-img/doc_st.png
+    - assets/program-img/event_runners.png
+    - assets/program-img/event_medi.png
+    - assets/program-img/event_eye.png
+    - assets/program-img/event_blood.png
+    - assets/program-img/happy_fitness.png
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
