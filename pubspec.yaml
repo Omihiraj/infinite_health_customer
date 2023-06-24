@@ -36,6 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_rating_bar: ^4.0.1
+  pie_chart: ^5.3.2
 
 dev_dependencies:
   flutter_test:
@@ -101,6 +102,22 @@ flutter:
     - assets/program-img/event_eye.png
     - assets/program-img/event_blood.png
     - assets/program-img/happy_fitness.png
+    - assets/program-img/happy_fitness.png
+    - assets/profile-img/appointment.png
+    - assets/profile-img/edit.png
+    - assets/profile-img/feedback.png
+    - assets/profile-img/my_orders.png
+    - assets/profile-img/progress.png
+    - assets/profile-img/rewards.png
+    - assets/profile-img/settings.png
+    - assets/profile-img/shedule.png
+    - assets/profile-img/subscription.png
+    - assets/profile-img/upload.png
+    - assets/profile-img/wishlish.png
+    - assets/profile-img/profile.png
+    - assets/profile-img/appointment.png
+    - assets/profile-img/side_arrow.png
+
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

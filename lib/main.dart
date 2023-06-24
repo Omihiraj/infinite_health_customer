@@ -5,6 +5,11 @@ import 'package:ih_customer/screens/program/event_details.dart';
 import 'screens/change_pass_screen.dart';
 import 'screens/forgot_pass_screen.dart';
 import 'screens/our_consultants.dart';
+import 'screens/profile/change_password.dart';
+import 'screens/profile/edit_profile.dart';
+import 'screens/profile/profile_screen.dart';
+import 'screens/profile/profile_settings.dart';
+import 'screens/profile/progress_report.dart';
 import 'screens/program/event_screen.dart';
 import 'screens/program/infinite_health.dart';
 import 'screens/program/program_screen.dart';
@@ -28,7 +33,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: EventDetails(),
+      home: ChangePassword(),
     );
   }
 }
