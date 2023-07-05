@@ -6,10 +6,12 @@ class Header extends StatefulWidget {
       {super.key,
       required this.centerText,
       required this.lastItem,
-      this.alignLeft});
+      this.alignLeft,
+      this.shadowOn});
   final String centerText;
   final Widget lastItem;
   final bool? alignLeft;
+  final bool? shadowOn;
 
   @override
   State<Header> createState() => _HeaderState();

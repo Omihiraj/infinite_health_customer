@@ -49,7 +49,7 @@ class _TermsScreenState extends State<TermsScreen> {
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                      children: const [
                         Text(
                           'Terms of use',
                           style: TextStyle(

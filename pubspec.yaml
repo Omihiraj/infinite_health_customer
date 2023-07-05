@@ -151,6 +151,9 @@ flutter:
     - assets/img/heart.png
     - assets/screen-img/
     - assets/market-img/
+    - assets/img/
+    - assets/payment-img/
+    - assets/chat-img/
 
 
     

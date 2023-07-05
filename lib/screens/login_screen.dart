@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ih_customer/screens/sign_up_screen.dart';
 import 'package:ih_customer/widgets/bg_img.dart';
 
 import '../constants/colors.dart';
@@ -30,9 +31,9 @@ class _LoginScreenState extends State<LoginScreen> {
                             bottomRight: Radius.circular(10))),
                     child: const TextField(
                       decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Email or Phone",
-                      ),
+                          border: InputBorder.none,
+                          hintText: "Email or Phone",
+                          contentPadding: EdgeInsets.only(left: 20)),
                     )),
               ),
               Padding(
@@ -46,10 +47,10 @@ class _LoginScreenState extends State<LoginScreen> {
                             bottomRight: Radius.circular(10))),
                     child: const TextField(
                       decoration: InputDecoration(
-                        suffixIcon: Icon(Icons.remove_red_eye),
-                        border: InputBorder.none,
-                        hintText: "Password",
-                      ),
+                          suffixIcon: Icon(Icons.remove_red_eye),
+                          border: InputBorder.none,
+                          hintText: "Password",
+                          contentPadding: EdgeInsets.only(left: 20, top: 15)),
                     )),
               ),
               Row(
@@ -78,15 +79,23 @@ class _LoginScreenState extends State<LoginScreen> {
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 50, vertical: 12),
-                      decoration: BoxDecoration(
-                          color: secondaryColor,
-                          borderRadius: BorderRadius.circular(10)),
-                      child: const Text(
-                        "Sign Up",
-                        style: TextStyle(color: Colors.white),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SignUpScreen()));
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 50, vertical: 12),
+                        decoration: BoxDecoration(
+                            border: Border.all(width: 1, color: Colors.white),
+                            borderRadius: BorderRadius.circular(10)),
+                        child: const Text(
+                          "Sign Up",
+                          style: TextStyle(color: secondaryColor),
+                        ),
                       ),
                     )
                   ],

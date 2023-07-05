@@ -1,48 +1,36 @@
 import 'package:flutter/material.dart';
+
 import 'package:ih_customer/constants/colors.dart';
 
+import 'package:ih_customer/widgets/calls.dart';
+import 'package:ih_customer/widgets/group_chats.dart';
+import 'package:ih_customer/widgets/video_calls.dart';
+
+import '../../widgets/all_chats.dart';
+
 class Chat extends StatefulWidget {
-  final int id;
-  const Chat({Key? key, required this.id}) : super(key: key);
+  const Chat({Key? key}) : super(key: key);
 
   @override
   State<Chat> createState() => _ChatState();
 }
 
 class _ChatState extends State<Chat> with WidgetsBindingObserver {
-  late PageController _pageController;
-
-  TabController? tabController;
-  int currentIndex = 0;
-
-  // @override
-  // void initState() {
-  //   currentIndex = widget.id < 0
-  //       ? 0
-  //       : widget.id > 4
-  //           ? 4
-  //           : widget.id;
-  //   _pageController = PageController(initialPage: currentIndex);
-  //   WidgetsBinding.instance.addObserver(this);
-  //   _pageController = PageController();
-  //   super.initState();
-  // }
-
-  // @override
-  // void dispose() {
-  //   _pageController.dispose();
-  //   WidgetsBinding.instance.removeObserver(this);
-  //   super.dispose();
-  // }
-
+  int selectItem = 0;
+  List<Widget> chatScreens = const [
+    AllChats(),
+    GroupChats(),
+    Calls(),
+    VideoCalls()
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Message',
         ),
-        titleTextStyle: TextStyle(
+        titleTextStyle: const TextStyle(
           color: secondaryColor,
           fontSize: 18,
           fontWeight: FontWeight.w500,
@@ -56,87 +44,79 @@ class _ChatState extends State<Chat> with WidgetsBindingObserver {
         ],
         leading: Image.asset("assets/screen-img/menu.png"),
       ),
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         height: double.infinity,
         child: Column(
           children: [
             SizedBox(
-              height: 60,
-              width: double.infinity,
-              child: ListView.builder(
-                itemCount: 4,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) => Column(
+                height: 70,
+                width: double.infinity,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          currentIndex = index;
-                          print(index);
-                        });
-
-                      } ,
-                      child: Container(
-                        margin: EdgeInsets.all(5),
-                        width: 80,
-                        height: 45,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(4),
-                          color: Colors.yellow,
-                        ),
-
-                      ),
-                    ),
-
-
+                    chatHItem(
+                        itemName: "Chats",
+                        img: "assets/chat-img/chat.png",
+                        selectImg: "assets/chat-img/chat_select.png",
+                        index: 0),
+                    chatHItem(
+                        itemName: "Group Chats",
+                        img: "assets/chat-img/team.png",
+                        selectImg: "assets/chat-img/team_select.png",
+                        index: 1),
+                    chatHItem(
+                        itemName: "Calls",
+                        img: "assets/chat-img/call.png",
+                        selectImg: "assets/chat-img/call_select.png",
+                        index: 2),
+                    chatHItem(
+                        itemName: "Video Calls",
+                        img: "assets/chat-img/video.png",
+                        selectImg: "assets/chat-img/video_select.png",
+                        index: 3),
                   ],
-                ),
-              ),
-            ),
+                )),
+            chatScreens[selectItem]
           ],
         ),
       ),
     );
   }
-}
 
-// class Chat extends StatefulWidget {
-//   final int id;
-//   const Chat({Key? key, required this.id}) : super(key: key);
-//
-//   @override
-//   State<Chat> createState() => _ChatState();
-// }
-//
-// class _ChatState extends State<Chat> with WidgetsBindingObserver {
-//   @override
-//   Widget build(BuildContext context) {
-//     late PageController _pageController;
-//     int currentIndex = 0;
-//
-//     @override
-//     void initState() {
-//       currentIndex = widget.id < 0
-//           ? 0
-//           : widget.id > 4
-//               ? 4
-//               : widget.id;
-//       _pageController = PageController(initialPage: currentIndex);
-//       WidgetsBinding.instance.addObserver(this);
-//       _pageController = PageController();
-//       super.initState();
-//     }
-//
-//     @override
-//     void dispose() {
-//       _pageController.dispose();
-//       WidgetsBinding.instance.removeObserver(this);
-//       super.dispose();
-//     }
-//
-//     return Scaffold(
-//
-//     );
-//   }
-// }
+  Widget chatHItem(
+      {required int index,
+      required String img,
+      required String itemName,
+      required String selectImg}) {
+    return InkWell(
+      onTap: () {
+        setState(() {
+          selectItem = index;
+        });
+      },
+      child: Column(
+        children: [
+          Container(
+            margin: const EdgeInsets.all(5),
+            width: 85,
+            height: 45,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: selectItem == index ? primaryColor : Colors.white,
+                boxShadow: const [
+                  BoxShadow(
+                      color: Colors.grey, blurRadius: 2, offset: Offset(0, 5))
+                ]),
+            child:
+                selectItem == index ? Image.asset(selectImg) : Image.asset(img),
+          ),
+          Text(
+            itemName,
+            style: const TextStyle(fontSize: 10),
+          )
+        ],
+      ),
+    );
+  }
+}

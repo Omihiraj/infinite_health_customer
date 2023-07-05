@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ih_customer/constants/colors.dart';
 
 class AppDropDown<T> extends StatefulWidget {
-  AppDropDown({
+  const AppDropDown({
     Key? key,
-
     required this.items,
     this.value,
     this.onChanged,

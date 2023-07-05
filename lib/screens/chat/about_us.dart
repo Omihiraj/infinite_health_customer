@@ -80,7 +80,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                 spacer,
                 Row(
                   children: [
-                    Container(
+                    SizedBox(
                       height: 100,
                       width: 100,
                       child: Image.asset("assets/screen-img/about_us_logo.png"),
@@ -234,7 +234,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
-                                    children: [
+                                    children: const [
                                       SizedBox(
                                         height: 10,
                                       ),
@@ -262,7 +262,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
+                              children: const [
                                 Text(
                                   'Read more...',
                                   style: TextStyle(
@@ -308,7 +308,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
-                                    children: [
+                                    children: const [
                                       SizedBox(
                                         height: 10,
                                       ),
@@ -336,7 +336,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
+                              children: const [
                                 Text(
                                   'Read more...',
                                   style: TextStyle(
@@ -382,7 +382,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
-                                    children: [
+                                    children: const [
                                       SizedBox(
                                         height: 10,
                                       ),
@@ -410,7 +410,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
+                              children: const [
                                 Text(
                                   'Read more...',
                                   style: TextStyle(
@@ -487,7 +487,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           SizedBox(
                             height: 10,
                           ),
@@ -514,7 +514,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
+                  children: const [
                     Text(
                       'Read more...',
                       style: TextStyle(fontSize: 10, color: Colors.black),

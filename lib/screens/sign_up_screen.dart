@@ -31,9 +31,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             bottomRight: Radius.circular(10))),
                     child: const TextField(
                       decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "First Name",
-                      ),
+                          border: InputBorder.none,
+                          hintText: "First Name",
+                          contentPadding: EdgeInsets.only(left: 20)),
                     )),
               ),
               Padding(
@@ -47,9 +47,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             bottomRight: Radius.circular(10))),
                     child: const TextField(
                       decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Last Name",
-                      ),
+                          border: InputBorder.none,
+                          hintText: "Last Name",
+                          contentPadding: EdgeInsets.only(left: 20)),
                     )),
               ),
               Padding(
@@ -68,7 +68,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 bottomRight: Radius.circular(10))),
                         child: const TextField(
                           decoration: InputDecoration(
-                              border: InputBorder.none, hintText: "Age"),
+                              border: InputBorder.none,
+                              hintText: "Age",
+                              contentPadding: EdgeInsets.only(left: 20)),
                         )),
                     Container(
                         width: 100,
@@ -80,7 +82,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 bottomRight: Radius.circular(10))),
                         child: const TextField(
                           decoration: InputDecoration(
-                              border: InputBorder.none, hintText: "Gender"),
+                              border: InputBorder.none,
+                              hintText: "Gender",
+                              contentPadding: EdgeInsets.only(left: 20)),
                         )),
                     Container(
                         width: 100,
@@ -92,7 +96,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 bottomRight: Radius.circular(10))),
                         child: const TextField(
                           decoration: InputDecoration(
-                              border: InputBorder.none, hintText: "D.O.B"),
+                              border: InputBorder.none,
+                              hintText: "D.O.B",
+                              contentPadding: EdgeInsets.only(left: 20)),
                         )),
                   ],
                 ),
@@ -108,9 +114,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             bottomRight: Radius.circular(10))),
                     child: const TextField(
                       decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "D.O.B",
-                      ),
+                          border: InputBorder.none,
+                          hintText: "D.O.B",
+                          contentPadding: EdgeInsets.only(left: 20)),
                     )),
               ),
               Padding(
@@ -124,9 +130,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             bottomRight: Radius.circular(10))),
                     child: const TextField(
                       decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Height",
-                      ),
+                          border: InputBorder.none,
+                          hintText: "Height",
+                          contentPadding: EdgeInsets.only(left: 20)),
                     )),
               ),
               Padding(
@@ -140,9 +146,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             bottomRight: Radius.circular(10))),
                     child: const TextField(
                       decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Weight",
-                      ),
+                          border: InputBorder.none,
+                          hintText: "Weight",
+                          contentPadding: EdgeInsets.only(left: 20)),
                     )),
               ),
               Padding(
@@ -156,9 +162,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             bottomRight: Radius.circular(10))),
                     child: const TextField(
                       decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Health Issue",
-                      ),
+                          border: InputBorder.none,
+                          hintText: "Health Issue",
+                          contentPadding: EdgeInsets.only(left: 20)),
                     )),
               ),
               Padding(
@@ -237,9 +243,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             bottomRight: Radius.circular(10))),
                     child: const TextField(
                       decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Email or Phone",
-                      ),
+                          border: InputBorder.none,
+                          hintText: "Email or Phone",
+                          contentPadding: EdgeInsets.only(left: 20)),
                     )),
               ),
               Padding(
@@ -253,9 +259,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             bottomRight: Radius.circular(10))),
                     child: const TextField(
                       decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Create Password",
-                      ),
+                          border: InputBorder.none,
+                          hintText: "Create Password",
+                          contentPadding: EdgeInsets.only(left: 20)),
                     )),
               ),
               Padding(
@@ -269,9 +275,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             bottomRight: Radius.circular(10))),
                     child: const TextField(
                       decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Confirm Password",
-                      ),
+                          border: InputBorder.none,
+                          hintText: "Confirm Password",
+                          contentPadding: EdgeInsets.only(left: 20)),
                     )),
               ),
               Padding(

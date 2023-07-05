@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ih_customer/constants/colors.dart';
 import 'package:ih_customer/constants/sizes.dart';
+import 'package:ih_customer/screens/consultants/consultants.dart';
+import 'package:ih_customer/screens/login_screen.dart';
+import 'package:ih_customer/screens/market/market_place.dart';
 
 class BeforeLogin extends StatefulWidget {
   const BeforeLogin({super.key});
@@ -56,9 +59,17 @@ class _BeforeLoginState extends State<BeforeLogin> {
                           ),
                         ],
                       ),
-                      const Text(
-                        "Signup/Login",
-                        style: TextStyle(color: Colors.white),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const LoginScreen()));
+                        },
+                        child: const Text(
+                          "Signup/Login",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       )
                     ],
                   ),
@@ -182,13 +193,16 @@ class _BeforeLoginState extends State<BeforeLogin> {
                               children: [
                                 docTypeItem(
                                     type: "Our Consultants",
-                                    img: "assets/home-img/consultants.png"),
+                                    img: "assets/home-img/consultants.png",
+                                    navigatePage: const Consultants()),
                                 docTypeItem(
                                     type: "Market Place",
-                                    img: "assets/home-img/market.png"),
+                                    img: "assets/home-img/market.png",
+                                    navigatePage: const MarketPlace()),
                                 docTypeItem(
-                                    type: "Recipes",
-                                    img: "assets/home-img/recipes.png")
+                                  type: "Recipes",
+                                  img: "assets/home-img/recipes.png",
+                                )
                               ],
                             ),
                           ),
@@ -716,11 +730,22 @@ class _BeforeLoginState extends State<BeforeLogin> {
     );
   }
 
-  Padding docTypeItem({required String type, required String img}) {
+  Widget docTypeItem(
+      {required String type, required String img, Widget? navigatePage}) {
     return Padding(
       padding: const EdgeInsets.only(right: 5.0),
-      child: Column(
-        children: [Image.asset(img), Text(type)],
+      child: InkWell(
+        onTap: () {
+          navigatePage != null
+              ? Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => navigatePage),
+                )
+              : null;
+        },
+        child: Column(
+          children: [Image.asset(img), Text(type)],
+        ),
       ),
     );
   }
